@@ -28,7 +28,6 @@ final class FoodDataService: ObservableObject, FoodDataServiceProtocol {
         let hasConnection = await networkService.checkConnection()
         
         if hasConnection {
-            // Очищаем массивы перед загрузкой новых данных
             combos.removeAll()
             desserts.removeAll()
             drinks.removeAll()

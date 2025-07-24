@@ -52,7 +52,6 @@ struct MenuView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Баннер успеха вместо названия города
             if showSuccessBanner {
                 SuccessBanner { showSuccessBanner = false }
                     .padding(.horizontal, 16)
@@ -75,7 +74,6 @@ struct MenuView: View {
                         
                         PromoBanners()
                         
-                        // Отступ между баннерами и категориями
                         Rectangle()
                             .fill(Color.white)
                             .frame(height: 16)

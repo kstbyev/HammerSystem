@@ -36,7 +36,7 @@ struct SuccessBanner: View {
         HStack {
             Image(systemName: "checkmark.circle.fill")
                 .foregroundColor(.green)
-                .opacity(0) // Невидимая иконка для баланса
+                .opacity(0)
 
             Spacer()
             
