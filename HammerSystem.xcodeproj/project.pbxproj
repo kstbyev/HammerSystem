@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04990FE82E3106E500DED6EB /* HammerSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FE72E3106E500DED6EB /* HammerSystemApp.swift */; };
+		04990FEA2E3106E500DED6EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FE92E3106E500DED6EB /* ContentView.swift */; };
+		04990FEC2E3106E700DED6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04990FEB2E3106E700DED6EB /* Assets.xcassets */; };
+		04990FF02E3106E700DED6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04990FEF2E3106E700DED6EB /* Preview Assets.xcassets */; };
+		04990FFA2E3239F100DED6EB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FF62E3239F100DED6EB /* MainTabView.swift */; };
+		04990FFB2E3239F100DED6EB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FF72E3239F100DED6EB /* SplashView.swift */; };
+		04990FFC2E3239F100DED6EB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FF82E3239F100DED6EB /* MenuView.swift */; };
+		04990FFD2E3239F100DED6EB /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FF92E3239F100DED6EB /* AuthView.swift */; };
+		049910092E3278A300DED6EB /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04990FFE2E3278A200DED6EB /* CityPickerView.swift */; };
+		0499100A2E3278A300DED6EB /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910002E3278A200DED6EB /* Banners.swift */; };
+		0499100B2E3278A300DED6EB /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910012E3278A200DED6EB /* FoodCard.swift */; };
+		0499100C2E3278A300DED6EB /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910022E3278A200DED6EB /* CategoryHeader.swift */; };
+		0499100D2E3278A300DED6EB /* FoodModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910042E3278A200DED6EB /* FoodModels.swift */; };
+		0499100E2E3278A300DED6EB /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910062E3278A200DED6EB /* CacheService.swift */; };
+		0499100F2E3278A300DED6EB /* FoodDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910072E3278A200DED6EB /* FoodDataService.swift */; };
+		049910102E3278A300DED6EB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910082E3278A200DED6EB /* NetworkService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04990FE42E3106E500DED6EB /* HammerSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HammerSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04990FE72E3106E500DED6EB /* HammerSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HammerSystemApp.swift; sourceTree = "<group>"; };
+		04990FE92E3106E500DED6EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04990FEB2E3106E700DED6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04990FED2E3106E700DED6EB /* HammerSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HammerSystem.entitlements; sourceTree = "<group>"; };
+		04990FEF2E3106E700DED6EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04990FF62E3239F100DED6EB /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		04990FF72E3239F100DED6EB /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		04990FF82E3239F100DED6EB /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		04990FF92E3239F100DED6EB /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		04990FFE2E3278A200DED6EB /* CityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
+		049910002E3278A200DED6EB /* Banners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
+		049910012E3278A200DED6EB /* FoodCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
+		049910022E3278A200DED6EB /* CategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHeader.swift; sourceTree = "<group>"; };
+		049910042E3278A200DED6EB /* FoodModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModels.swift; sourceTree = "<group>"; };
+		049910062E3278A200DED6EB /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		049910072E3278A200DED6EB /* FoodDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDataService.swift; sourceTree = "<group>"; };
+		049910082E3278A200DED6EB /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04990FE12E3106E500DED6EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04990FDB2E3106E500DED6EB = {
+			isa = PBXGroup;
+			children = (
+				04990FE62E3106E500DED6EB /* HammerSystem */,
+				04990FE52E3106E500DED6EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04990FE52E3106E500DED6EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04990FE42E3106E500DED6EB /* HammerSystem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04990FE62E3106E500DED6EB /* HammerSystem */ = {
+			isa = PBXGroup;
+			children = (
+				04990FFF2E3278A200DED6EB /* Components */,
+				049910032E3278A200DED6EB /* Models */,
+				049910052E3278A200DED6EB /* Services */,
+				04990FF92E3239F100DED6EB /* AuthView.swift */,
+				04990FF62E3239F100DED6EB /* MainTabView.swift */,
+				04990FF82E3239F100DED6EB /* MenuView.swift */,
+				04990FF72E3239F100DED6EB /* SplashView.swift */,
+				04990FE72E3106E500DED6EB /* HammerSystemApp.swift */,
+				04990FE92E3106E500DED6EB /* ContentView.swift */,
+				04990FFE2E3278A200DED6EB /* CityPickerView.swift */,
+				04990FEB2E3106E700DED6EB /* Assets.xcassets */,
+				04990FED2E3106E700DED6EB /* HammerSystem.entitlements */,
+				04990FEE2E3106E700DED6EB /* Preview Content */,
+			);
+			path = HammerSystem;
+			sourceTree = "<group>";
+		};
+		04990FEE2E3106E700DED6EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04990FEF2E3106E700DED6EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04990FFF2E3278A200DED6EB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				049910002E3278A200DED6EB /* Banners.swift */,
+				049910012E3278A200DED6EB /* FoodCard.swift */,
+				049910022E3278A200DED6EB /* CategoryHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		049910032E3278A200DED6EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				049910042E3278A200DED6EB /* FoodModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		049910052E3278A200DED6EB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				049910062E3278A200DED6EB /* CacheService.swift */,
+				049910072E3278A200DED6EB /* FoodDataService.swift */,
+				049910082E3278A200DED6EB /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04990FE32E3106E500DED6EB /* HammerSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04990FF32E3106E700DED6EB /* Build configuration list for PBXNativeTarget "HammerSystem" */;
+			buildPhases = (
+				04990FE02E3106E500DED6EB /* Sources */,
+				04990FE12E3106E500DED6EB /* Frameworks */,
+				04990FE22E3106E500DED6EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HammerSystem;
+			productName = HammerSystem;
+			productReference = 04990FE42E3106E500DED6EB /* HammerSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04990FDC2E3106E500DED6EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					04990FE32E3106E500DED6EB = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 04990FDF2E3106E500DED6EB /* Build configuration list for PBXProject "HammerSystem" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04990FDB2E3106E500DED6EB;
+			productRefGroup = 04990FE52E3106E500DED6EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04990FE32E3106E500DED6EB /* HammerSystem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04990FE22E3106E500DED6EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04990FF02E3106E700DED6EB /* Preview Assets.xcassets in Resources */,
+				04990FEC2E3106E700DED6EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04990FE02E3106E500DED6EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04990FFC2E3239F100DED6EB /* MenuView.swift in Sources */,
+				0499100A2E3278A300DED6EB /* Banners.swift in Sources */,
+				0499100D2E3278A300DED6EB /* FoodModels.swift in Sources */,
+				049910092E3278A300DED6EB /* CityPickerView.swift in Sources */,
+				04990FEA2E3106E500DED6EB /* ContentView.swift in Sources */,
+				0499100C2E3278A300DED6EB /* CategoryHeader.swift in Sources */,
+				049910102E3278A300DED6EB /* NetworkService.swift in Sources */,
+				04990FFD2E3239F100DED6EB /* AuthView.swift in Sources */,
+				04990FFB2E3239F100DED6EB /* SplashView.swift in Sources */,
+				0499100B2E3278A300DED6EB /* FoodCard.swift in Sources */,
+				04990FE82E3106E500DED6EB /* HammerSystemApp.swift in Sources */,
+				0499100E2E3278A300DED6EB /* CacheService.swift in Sources */,
+				0499100F2E3278A300DED6EB /* FoodDataService.swift in Sources */,
+				04990FFA2E3239F100DED6EB /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04990FF12E3106E700DED6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04990FF22E3106E700DED6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		04990FF42E3106E700DED6EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HammerSystem/HammerSystem.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HammerSystem/Preview Content\"";
+				DEVELOPMENT_TEAM = F8WCS6733C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharipov.HammerSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04990FF52E3106E700DED6EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HammerSystem/HammerSystem.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HammerSystem/Preview Content\"";
+				DEVELOPMENT_TEAM = F8WCS6733C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharipov.HammerSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04990FDF2E3106E500DED6EB /* Build configuration list for PBXProject "HammerSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04990FF12E3106E700DED6EB /* Debug */,
+				04990FF22E3106E700DED6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04990FF32E3106E700DED6EB /* Build configuration list for PBXNativeTarget "HammerSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04990FF42E3106E700DED6EB /* Debug */,
+				04990FF52E3106E700DED6EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04990FDC2E3106E500DED6EB /* Project object */;
+}
