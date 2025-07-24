@@ -12,25 +12,25 @@ struct MainTabView: View {
         TabView {
             MenuView()
                 .tabItem {
-                    Image(systemName: "pizza")
+                    Image("Меню")
                     Text("Меню")
                 }
             
             ContactsView()
                 .tabItem {
-                    Image(systemName: "phone")
+                    Image("Контакты")
                     Text("Контакты")
                 }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person")
+                    Image("Профиль")
                     Text("Профиль")
                 }
             
             CartView()
                 .tabItem {
-                    Image(systemName: "cart")
+                    Image("Корзина")
                     Text("Корзина")
                 }
         }

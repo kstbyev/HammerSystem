@@ -15,40 +15,39 @@ struct AuthView: View {
             Color.gray.opacity(0.1)
                 .ignoresSafeArea()
             
+
             // Баннер ошибки поверх всего содержимого
             if showError {
-                VStack {
-                    ZStack {
-                        HStack {
-                            Spacer()
-                            
-                            Button(action: {
-                                showError = false
-                            }) {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(Color(red: 0.992, green: 0.227, blue: 0.412))
-                                    .font(.system(size: 14, weight: .bold))
+                            VStack {
+                                HStack {
+                                    Text("Неверный логин или пароль")
+                                        .font(.system(size: 13, weight: .semibold))
+                                        .foregroundColor(Color(red: 0.992, green: 0.227, blue: 0.412))
+                                        .lineLimit(1)
+                                        .frame(maxWidth: .infinity)
+
+                                    Button(action: {
+                                        showError = false
+                                    }) {
+                                        Image(systemName: "xmark.circle")
+                                            .foregroundColor(Color(red: 0.992, green: 0.227, blue: 0.412))
+                                            .font(.system(size: 16))
+                                    }
+                                }
+                                .padding(.horizontal, 20)
+                                .padding(.vertical, 15)
+                                .frame(width: 343, height: 50)
+                                .background(Color.white)
+                                .cornerRadius(20)
+                                .shadow(color: Color.black.opacity(0.12), radius: 4, x: 0, y: 4)
+                                .padding(.top, 0)
+
+                                Spacer()
                             }
-                            .padding(.trailing, 20)
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                            .animation(.easeInOut(duration: 0.3), value: showError)
+                            .zIndex(2)
                         }
-                        
-                        Text("Неверный логин или пароль")
-                            .font(.system(size: 13, weight: .semibold))
-                            .foregroundColor(Color(red: 0.992, green: 0.227, blue: 0.412))
-                            .lineLimit(1)
-                    }
-                    .frame(width: 343, height: 50)
-                    .background(Color.white)
-                    .cornerRadius(20)
-                    .shadow(color: Color.black.opacity(0.12), radius: 4, x: 0, y: 4)
-                    .padding(.top, 0)
-                    
-                    Spacer()
-                }
-                .transition(.move(edge: .top).combined(with: .opacity))
-                .animation(.easeInOut(duration: 0.3), value: showError)
-                .zIndex(2)
-            }
             
             VStack(spacing: 0) {
                 // Заголовок "Авторизация" в самом верху
@@ -59,15 +58,15 @@ struct AuthView: View {
                     .padding(.bottom, isKeyboardShown ? 40 : 120)
                     .animation(.easeInOut(duration: 0.3), value: isKeyboardShown)
                 
-                // Розовый логотип
-                Image("logo2")
-                    .resizable()
-                    .frame(width: isKeyboardShown ? 300 : 322, height: isKeyboardShown ? 96 : 103)
-                    .padding(.bottom, isKeyboardShown ? 10 : 40)
-                    .animation(.easeInOut(duration: 0.3), value: isKeyboardShown)
+                            // Розовый логотип
+            Image("logo2")
+                .resizable()
+                .frame(width: isKeyboardShown ? 300 : 322, height: isKeyboardShown ? 96 : 103)
+                .padding(.bottom, isKeyboardShown ? 10 : 60)
+                .animation(.easeInOut(duration: 0.3), value: isKeyboardShown)
                 
                 VStack(spacing: 20) {
-                    // Поле логина с иконкой Union
+                    // Поле логина с иконкой Union и анимацией
                     HStack {
                         Image("Union")
                             .resizable()
@@ -77,7 +76,9 @@ struct AuthView: View {
                         TextField("Логин", text: $login)
                             .foregroundColor(.black)
                             .onTapGesture {
-                                isKeyboardShown = true
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    isKeyboardShown = true
+                                }
                             }
                     }
                     .padding(.horizontal, 15)
@@ -97,17 +98,21 @@ struct AuthView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 18, height: 18)
                         if showPassword {
-                            TextField("Пароль", text: $password)
-                                .foregroundColor(.black)
-                                .onTapGesture {
+                                                    TextField("Пароль", text: $password)
+                            .foregroundColor(.black)
+                            .onTapGesture {
+                                withAnimation(.easeInOut(duration: 0.3)) {
                                     isKeyboardShown = true
                                 }
+                            }
                         } else {
-                            SecureField("Пароль", text: $password)
-                                .foregroundColor(.black)
-                                .onTapGesture {
+                                                    SecureField("Пароль", text: $password)
+                            .foregroundColor(.black)
+                            .onTapGesture {
+                                withAnimation(.easeInOut(duration: 0.3)) {
                                     isKeyboardShown = true
                                 }
+                            }
                         }
                         
                         // Показывать кнопку глаза только если есть текст в поле пароля
@@ -130,19 +135,14 @@ struct AuthView: View {
                     )
                     .cornerRadius(15)
                 }
-                .padding(.horizontal, 30)
-                .padding(.top, isKeyboardShown ? -15 : 0)
-                .padding(.bottom, isKeyboardShown ? 30 : 0)
-                .animation(.easeInOut(duration: 0.3), value: isKeyboardShown)
+                            .padding(.horizontal, 30)
+            .padding(.top, isKeyboardShown ? 10 : 0)
+            .padding(.bottom, isKeyboardShown ? 20 : 0)
                 
                 Spacer()
                 
-                // Белое пространство над кнопкой (компактное)
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(height: 20) // Компактный белый отступ
-                    
+                            // Контейнер для кнопки "Войти"
+            VStack(spacing: 0) {
                     // Кнопка "Войти" с хорошим отображением текста
                     Button(action: {
                         performAuth()
@@ -157,23 +157,28 @@ struct AuthView: View {
                             .opacity(login.isEmpty || password.isEmpty ? 0.5 : 1.0)
                     }
                     .disabled(login.isEmpty || password.isEmpty)
-                    .padding(.horizontal, 30)
-                    .padding(.bottom, 50)
-                    .background(Color.white)
+                                    .padding(.horizontal, 30)
+                .padding(.top, 15)
+                .padding(.bottom, 20)
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.white)
+                )
+                .cornerRadius(25)
                 }
             }
         }
         .onTapGesture {
             // Скрыть клавиатуру при нажатии вне полей
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-            isKeyboardShown = false
+            withAnimation(.easeInOut(duration: 0.3)) {
+                isKeyboardShown = false
+            }
         }
         .onChange(of: showSuccess) { success in
             if success {
-                // Небольшая задержка перед переходом
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    isShowingMain = true
-                }
+                // Сразу переходим на главный экран
+                isShowingMain = true
             }
         }
         .fullScreenCover(isPresented: $isShowingMain) {

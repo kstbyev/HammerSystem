@@ -34,20 +34,16 @@ struct SuccessBanner: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "checkmark.circle.fill")
-                .foregroundColor(.green)
-                .font(.system(size: 20))
-            
             Text("Вход выполнен успешно")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.green)
-            
-            Spacer()
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
             
             Button(action: onDismiss) {
-                Image(systemName: "xmark")
+                Image(systemName: "checkmark.circle")
                     .foregroundColor(.green)
-                    .font(.system(size: 14, weight: .bold))
+                    .font(.system(size: 16))
             }
         }
         .padding(.horizontal, 20)

@@ -51,12 +51,23 @@ struct MenuView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            CitySelector(selectedCity: $selectedCity, showCityPicker: $showCityPicker)
-            
-            if showSuccessBanner {
-                SuccessBanner { showSuccessBanner = false }
-            }
+        ZStack {
+            VStack(spacing: 0) {
+                ZStack {
+                    CitySelector(selectedCity: $selectedCity, showCityPicker: $showCityPicker)
+                    
+                    // Баннер успеха поверх выбора города
+                    if showSuccessBanner {
+                        VStack {
+                            SuccessBanner { showSuccessBanner = false }
+                                .animation(.easeInOut(duration: 0.3), value: showSuccessBanner)
+                                .padding(.horizontal, 16)
+                                .background(Color.white)
+                            Spacer()
+                        }
+                        .zIndex(1)
+                    }
+                }
             
             if foodService.isOfflineMode() {
                 OfflineBanner()
@@ -65,6 +76,11 @@ struct MenuView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+                        // Небольшой белый отступ от города
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(height: 12)
+                        
                         PromoBanners()
                         
                         Section {
@@ -92,10 +108,12 @@ struct MenuView: View {
                     }
                 }
             }
-        }
-        .background(Color(UIColor.systemBackground))
-        .sheet(isPresented: $showCityPicker) {
-            CityPickerView(selectedCity: $selectedCity, isPresented: $showCityPicker)
+            }
+            .background(Color(UIColor.systemBackground))
+            .sheet(isPresented: $showCityPicker) {
+                CityPickerView(selectedCity: $selectedCity, isPresented: $showCityPicker)
+            }
+            
         }
         .onAppear {
             setupInitialState()
@@ -111,8 +129,6 @@ struct MenuView: View {
             await foodService.loadData()
         }
     }
-    
-
 }
 
 #Preview {
