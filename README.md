@@ -1,10 +1,8 @@
 # HammerSystem
 
-iOS приложение для доставки еды, разработанное на SwiftUI с использованием принципов Clean Architecture и SOLID.
-
+iOS приложение для доставки еды, разработанное на SwiftUI 
 ## 🏗️ Архитектура
 
-Проект построен по принципам SOLID с использованием:
 - **MVVM** паттерн
 - **Clean Architecture**
 - **Dependency Injection**
@@ -21,6 +19,52 @@ iOS приложение для доставки еды, разработанн�
 - 🍽️ API интеграция (TheMealDB, TheCocktailDB)
 - 📱 Offline режим с кэшированием
 - 🎨 Pixel-perfect UI по дизайну
+
+- ## Скриншоты
+
+### Splash Screen
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a8232c0a-f082-4792-8f66-6475f3d6ed08" width="200" alt="Splash Screen">
+</p>
+
+
+### Login
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/96ec89b3-48ea-492a-bc91-770f164679ad" width="200" alt="Splash Screen">
+</p>
+
+
+### Login Input
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ff6446c9-1103-46de-80b0-9dff1ac54181" width="200" alt="Login Input">
+</p>
+
+
+### Login (error)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f3a33bfe-797d-41a6-809e-ffdc688809a0" width="200" alt="Login (error)">
+</p>
+
+
+### Login (successful)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c95ab77e-10ca-4d93-a4eb-30360d719ff5" width="200" alt="Login (successful)">
+</p>
+
+
+### Main View
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fa313087-3207-4475-8b46-17370dd53f36" width="200" alt="Main View">
+</p>
+
+
+### List Scrolled
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e91638b5-fc3a-4432-8538-079cff43d707" width="200" alt="List Scrolled">
+</p>
+
+
+
 
 ### 🛠️ Технологии:
 - **SwiftUI** - UI фреймворк
@@ -56,13 +100,6 @@ HammerSystem/
 - Xcode 15.0+
 - Swift 5.9+
 
-## 🎯 Особенности реализации
-
-- **Clean Code** с минимумом комментариев
-- **Testable** архитектура с протоколами
-- **Reusable** компоненты
-- **Error handling** и offline поддержка
-- **Performance** оптимизации
 
 ## 👨‍💻 Разработчик
 
