@@ -51,37 +51,34 @@ struct MenuView: View {
     }
     
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                ZStack {
-                    CitySelector(selectedCity: $selectedCity, showCityPicker: $showCityPicker)
-                    
-                    // Баннер успеха поверх выбора города
-                    if showSuccessBanner {
-                        VStack {
-                            SuccessBanner { showSuccessBanner = false }
-                                .animation(.easeInOut(duration: 0.3), value: showSuccessBanner)
-                                .padding(.horizontal, 16)
-                                .background(Color.white)
-                            Spacer()
-                        }
-                        .zIndex(1)
-                    }
-                }
+        VStack(spacing: 0) {
+            // Баннер успеха вместо названия города
+            if showSuccessBanner {
+                SuccessBanner { showSuccessBanner = false }
+                    .padding(.horizontal, 16)
+                    .padding(.top, 4)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            } else {
+                CitySelector(selectedCity: $selectedCity, showCityPicker: $showCityPicker)
+            }
             
             if foodService.isOfflineMode() {
                 OfflineBanner()
             }
-            
+
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
-                        // Небольшой белый отступ от города
                         Rectangle()
                             .fill(Color.white)
-                            .frame(height: 12)
+                            .frame(height: 20)
                         
                         PromoBanners()
+                        
+                        // Отступ между баннерами и категориями
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(height: 16)
                         
                         Section {
                             LazyVStack(spacing: 16) {
@@ -108,12 +105,10 @@ struct MenuView: View {
                     }
                 }
             }
-            }
-            .background(Color(UIColor.systemBackground))
-            .sheet(isPresented: $showCityPicker) {
-                CityPickerView(selectedCity: $selectedCity, isPresented: $showCityPicker)
-            }
-            
+        }
+        .background(Color(UIColor.systemBackground))
+        .sheet(isPresented: $showCityPicker) {
+            CityPickerView(selectedCity: $selectedCity, isPresented: $showCityPicker)
         }
         .onAppear {
             setupInitialState()

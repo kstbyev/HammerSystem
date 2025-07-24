@@ -25,15 +25,19 @@ final class FoodDataService: ObservableObject, FoodDataServiceProtocol {
     }
     
     func loadData() async {
-        loadCachedData()
-        
         let hasConnection = await networkService.checkConnection()
         
         if hasConnection {
+            // Очищаем массивы перед загрузкой новых данных
+            combos.removeAll()
+            desserts.removeAll()
+            drinks.removeAll()
+            
             await fetchFromAPI()
             saveToCache()
             isOffline = false
         } else {
+            loadCachedData()
             isOffline = cacheService.hasCachedData()
         }
     }

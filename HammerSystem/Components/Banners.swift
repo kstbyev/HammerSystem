@@ -30,30 +30,36 @@ struct CitySelector: View {
 }
 
 struct SuccessBanner: View {
-    let onDismiss: () -> Void
-    
+    var onDismiss: () -> Void
+
     var body: some View {
         HStack {
-            Text("Вход выполнен успешно")
-                .font(.system(size: 16, weight: .medium))
+            Image(systemName: "checkmark.circle.fill")
                 .foregroundColor(.green)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
+                .opacity(0) // Невидимая иконка для баланса
+
+            Spacer()
             
-            Button(action: onDismiss) {
-                Image(systemName: "checkmark.circle")
-                    .foregroundColor(.green)
-                    .font(.system(size: 16))
-            }
+            Text("Вход выполнен успешно")
+                .foregroundColor(.green)
+                .font(.system(size: 16, weight: .semibold))
+            
+            Spacer()
+
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 15)
-        .background(Color.white)
-        .cornerRadius(20)
-        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-        .padding(.horizontal, 16)
-        .padding(.top, 4)
-        .transition(.move(edge: .top).combined(with: .opacity))
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+        )
+        .padding(.bottom, 8)
     }
 }
 
