@@ -64,6 +64,13 @@ iOS приложение для доставки еды, разработанн�
 </p>
 
 
+## 🎥 Demo
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2d82817d-6f85-414c-a99d-83e5a647aa59" width="250" alt="App Demo">
+</p>
+
+
 
 
 ### 🛠️ Технологии:
